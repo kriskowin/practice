@@ -1,0 +1,4 @@
+# I love Python
+
+text = input()
+print(text[::-1])
