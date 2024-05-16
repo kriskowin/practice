@@ -1,0 +1,11 @@
+expression = input()
+stack = []
+for index in range(len(expression)):
+    if expression[index] == "(":
+        stack.append(index)
+    elif expression[index] == ")":
+        start_index = stack.pop()
+        # stack.pop() ще ни даде последната отваряща скоба.
+        print(expression[start_index:index+1])
+        # с "index+1" от expression взимам последната отваряща скоба + slice notation-a от
+        # expression принтирам всичко в скобите + скобите
