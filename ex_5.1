@@ -1,0 +1,12 @@
+from collections import deque
+
+kids = input(). split()
+step = int(input()) - 1
+counter = 0
+queue = deque(kids)
+
+while len(queue) > 1:
+    queue.rotate(-step)
+    print(f"Removed {queue.popleft()}")
+
+print(f"Last is {queue.popleft()}")
