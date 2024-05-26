@@ -1,0 +1,11 @@
+from collections import deque
+
+kids = input().split()
+kids = deque(kids)
+shuffle = int(input())
+
+while len(kids) > 1:
+    kids.rotate(-shuffle + 1)
+    print(f"Removed {kids.popleft()}")
+
+print(f"Last is {kids.popleft()}")
