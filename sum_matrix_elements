@@ -1,0 +1,17 @@
+matrix = []
+data = input().split(", ")
+rows = int(data[0])
+cols = int(data[1])
+total_sum = 0
+
+for i in range(rows):
+    row_data = input().split(", ")
+    total_data = []
+    for j in range(cols):
+        element = int(row_data[j])
+        total_sum += element
+        total_data.append(int(row_data[j]))
+    matrix.append(total_data)
+
+print(total_sum)
+print(matrix)
