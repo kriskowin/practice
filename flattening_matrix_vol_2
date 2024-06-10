@@ -1,0 +1,9 @@
+matrix = []
+lines = int(input())
+
+for i in range(lines):
+    current_line = input().split(", ")
+    matrix.append(current_line)
+    flattened_matrix = [int(num) for x in matrix for num in x]
+
+print(flattened_matrix)
