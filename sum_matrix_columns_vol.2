@@ -1,0 +1,14 @@
+rows, columns = [int(x) for x in input().split(", ")]
+matrix = []
+index = 0
+final_numbers = []
+
+for i in range(rows):
+    current_line = [int(x) for x in input().split()]
+    matrix.append(current_line)
+for j in range(columns):
+    for i in range(rows):
+        final_numbers.append(matrix[i][j])
+    print(sum(final_numbers))
+    final_numbers.clear()
+        
