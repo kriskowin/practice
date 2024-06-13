@@ -1,0 +1,9 @@
+parentheses = input()
+stack = []
+
+for index in range(len(parentheses)):
+    if parentheses[index] == "(":
+        stack.append(index)
+    elif parentheses[index] == ")":
+        start_index = stack.pop()
+        print(parentheses[start_index:index+1])
