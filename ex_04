@@ -1,0 +1,32 @@
+from collections import deque
+
+queue = deque()
+water_qty = int(input())
+while True:
+    name = input()
+    if name == "Start":
+        break
+    else:
+        queue.append(name)
+
+while True:
+    command = input().split()
+    if command[0] == "End":
+        print(f"{water_qty} liters left")
+        break
+
+    else:
+        if command[0].isdigit():
+            liters_wanted = int(command[0])
+            if liters_wanted <= water_qty:
+                water_qty -= liters_wanted
+                person = queue.popleft()
+                print(f"{person} got water")
+            else:
+                person = queue.popleft()
+                print(f"{person} must wait")
+
+        elif len(command) == 2:
+            action = command[0]
+            liters_to_refill = int(command[1])
+            water_qty += liters_to_refill
