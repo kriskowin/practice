@@ -1,0 +1,19 @@
+stack = []
+lines = int(input())
+for line in range(lines):
+    query = input().split()
+    command = int(query[0])
+    if len(query) > 1:
+        number = int(query[1])
+
+    if command == 1:
+        stack.append(number)
+    elif command == 2:
+        if len(stack) > 0:
+            stack.pop()
+    elif command == 3:
+        print(max(stack))
+    elif command == 4:
+        print(min(stack))
+
+print(*reversed(stack), sep=", ")
