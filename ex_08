@@ -1,0 +1,14 @@
+from collections import deque
+
+food_qty = int(input())
+orders = deque([int(x) for x in input().split()])
+print(max(orders))
+
+while orders and orders[0] <= food_qty:
+    food_qty -= orders.popleft()
+
+if orders:
+    print('Orders left:', *orders)
+
+else:
+    print("Orders complete")
