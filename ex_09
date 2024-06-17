@@ -1,0 +1,12 @@
+box = [int(x) for x in input().split()]
+capacity = int(input())
+racks = 0
+
+while box:
+    racks += 1
+    current_rack_capacity = capacity
+    while box and box[-1] <= current_rack_capacity:
+        current_rack_capacity -= box.pop()
+
+
+print(racks)
