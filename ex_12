@@ -1,0 +1,9 @@
+unique_names = set()
+lines = int(input())
+
+for line in range(lines):
+    current_name = input()
+    unique_names.add(current_name)
+
+for name in unique_names:
+    print(name)
