@@ -1,0 +1,19 @@
+lines = int(input())
+parking_lot = []
+
+for car in range(lines):
+
+    command = input().split(", ")
+    action = command[0]
+    number = command[1]
+
+    if action == "IN":
+        if number not in parking_lot:
+            parking_lot.append(number)
+    elif action == "OUT":
+        if number in parking_lot:
+            parking_lot.remove(number)
+for car in parking_lot:
+    print(car)
+if not parking_lot:
+    print("Parking Lot is Empty")
