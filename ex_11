@@ -1,0 +1,16 @@
+record = {}
+lines = int(input())
+
+for student_grade in range(lines):
+
+    inside = input().split()
+    name = inside[0]
+    grade = float(inside[1])
+
+    if name not in record:
+        record[name] = []
+    record[name].append(f'{grade:.2f}')
+
+for name in record:
+    average = sum([float(x) for x in record[name]]) / len([float(x) for x in record[name]])
+    print(f"{name} -> {[float(x) for x in record[name]]} (avg: {average:.2f})")
