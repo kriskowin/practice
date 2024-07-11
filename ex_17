@@ -1,0 +1,11 @@
+rows, columns = [int(x) for x in input().split(", ")]
+matrix = []
+counter = 0
+
+for row in range(rows):
+    row_data = [int(x) for x in input().split(", ")]
+    matrix.append(row_data)
+    counter += sum(row_data)
+
+print(counter)
+print(matrix)
