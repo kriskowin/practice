@@ -1,0 +1,16 @@
+data = [int(x) for x in input().split(", ")]
+rows = data[0]
+cols = data[1]
+max_sums = []
+total_sum = 0
+matrix = []
+
+for row in range(rows):
+    matrix += [int(x) for x in input().split(", ")]
+
+for shuffle in range(4):
+    total_sum += max(matrix)
+    max_sums.append(max(matrix))
+    matrix.remove(max(matrix))
+print(total_sum)
+print(max_sums)
