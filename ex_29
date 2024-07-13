@@ -1,0 +1,13 @@
+size = int(input())
+matrix = []
+counter = 0
+
+for part in range(size):
+    current_part = list(map(int, input().split()))
+    matrix.append(current_part)
+
+counter += matrix[0][0]
+counter += matrix[1][1]
+counter += matrix[2][2]
+
+print(counter)
