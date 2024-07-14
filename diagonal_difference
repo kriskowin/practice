@@ -1,0 +1,17 @@
+size = int(input())
+cube = []
+primary = 0
+secondary = 0
+
+for line in range(size):
+    cube.append([int(x) for x in input().split()])
+
+if cube[0][0] + cube[1][1] + cube[2][2] > cube[0][2] + cube[1][1] + cube[2][0]:
+    primary = cube[0][0] + cube[1][1] + cube[2][2]
+    secondary = cube[0][2] + cube[1][1] + cube[2][0]
+else:
+    primary = cube[0][2] + cube[1][1] + cube[2][0]
+    secondary = cube[0][0] + cube[1][1] + cube[2][2]
+
+difference = abs(primary - secondary)
+print(difference)
