@@ -1,0 +1,27 @@
+def read_matrix(data):
+    matrix = []
+
+    rows = data[0]
+    cols = data[1]
+    for row in range(rows):
+        row_data = [int(x) for x in input().split(", ")]
+        matrix.append(row_data)
+    return matrix
+
+
+def counter(data):
+    count = 0
+    rows = data[0]
+    cols = data[1]
+    for row in range(rows):
+        row_data = [int(x) for x in input().split(", ")]
+        count += sum(row_data)
+    return count
+
+
+data = [int(x) for x in input().split(",")]
+
+final = read_matrix(data)
+total = counter(data)
+print(total)
+print(final)
