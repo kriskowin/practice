@@ -1,0 +1,8 @@
+deposited_sum = int(input())
+deadline = int(input())
+interest_rate = float(input())
+
+total_interest_rate = deposited_sum * (interest_rate / 100)
+interest_for_month = total_interest_rate / 12
+total = (interest_for_month * deadline) + deposited_sum
+print(total)
