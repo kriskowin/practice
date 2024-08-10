@@ -1,0 +1,10 @@
+length = float(input())
+width = float(input())
+height = float(input())
+percent = float(input())
+
+volume = length * width * height
+in_liters = volume / 1000
+needed_liters = in_liters * (100 - percent) / 100
+
+print(needed_liters)
