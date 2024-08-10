@@ -1,0 +1,9 @@
+nylon_qty = (int(input()) + 2) * 1.5
+paint_qty = int(input()) * 14.5
+thinner_qty = int(input()) * 5
+paint_qty = 1.1 * paint_qty
+total = nylon_qty + paint_qty + thinner_qty + 0.4
+workers_cost = int(input()) * (0.3 * total)
+
+total_cost = total + workers_cost
+print(total_cost)
