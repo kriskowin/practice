@@ -1,0 +1,9 @@
+h_qty = int(input()) * 5.8
+m_qty = int(input()) * 7.2
+p_qty = int(input()) * 1.2
+discount = int(input())
+
+total = (m_qty + p_qty + h_qty)
+total_price = total - (total * discount) / 100
+
+print(total_price)
