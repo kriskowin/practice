@@ -1,0 +1,14 @@
+hour = int(input())
+minute = int(input()) + 15
+
+if minute >= 60:
+    minute -= 60
+    hour += 1
+if hour >= 24:
+    hour -= 24
+
+if len(str(minute)) == 1:
+    print(f"{hour}:0{minute}")
+else:
+    print(f"{hour}:{minute}")
+
