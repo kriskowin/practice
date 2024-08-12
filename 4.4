@@ -1,0 +1,23 @@
+holiday_price = float(input())
+puzzles = int(input())
+dolls = int(input())
+bears = int(input())
+minions = int(input())
+trucks = int(input())
+
+puzzles_price = puzzles * 2.6
+dolls_price = dolls * 3.0
+bears_price = bears * 4.1
+minions_price = minions * 8.2
+trucks_price = trucks * 2.0
+
+total_price = puzzles_price + dolls_price + bears_price + minions_price + trucks_price
+total_toys = puzzles + dolls + bears + minions + trucks
+if total_toys >= 50:
+    total_price *= 0.75
+total_price *= 0.9
+
+if total_price >= holiday_price:
+    print(f"Yes! {total_price - holiday_price:.2f} lv left.")
+else:
+    print(f"Not enough money! {abs(total_price - holiday_price):.2f} lv needed.")
