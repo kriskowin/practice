@@ -1,0 +1,18 @@
+from math import floor
+
+current_record = float(input())
+distance = float(input())
+time_for_meter = float(input())
+
+time_for_full_distance = distance * time_for_meter
+time_for_full_distance_with_delay = floor(distance / 15)
+time_for_15_meters = time_for_full_distance_with_delay * 12.5
+full_time = time_for_15_meters + time_for_full_distance
+
+difference = abs(full_time - current_record)
+
+if full_time >= current_record:
+    print(f"No, he failed! He was {difference:.2f} seconds slower.")
+else:
+    print(f" Yes, he succeeded! The new world record is {full_time:.2f} seconds.")
+
