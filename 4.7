@@ -1,0 +1,22 @@
+budget = float(input())
+cards = int(input())
+processors = int(input())
+ram = int(input())
+total_cost = 0
+
+cards_sum = 250 * cards
+processor_price = 0.35 * cards_sum
+processor_sum = processor_price * processors
+ram_price = 0.1 * cards_sum
+ram_sum = ram_price * ram
+total_cost += cards_sum + processor_sum + ram_sum
+
+if cards > processors:
+    total_cost *= 0.85
+
+difference = abs(total_cost - budget)
+
+if total_cost <= budget:
+    print(f"You have {difference:.2f} leva left!")
+else:
+    print(f"Not enough money! You need {difference:.2f} leva more!")
