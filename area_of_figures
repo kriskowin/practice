@@ -1,0 +1,20 @@
+from math import pi
+figure = input()
+
+if figure == "square":
+    side = float(input())
+    print(f"{side * side:.3f}")
+
+elif figure == "rectangle":
+    length = float(input())
+    width = float(input())
+    print(f"{length * width:.3f}")
+
+elif figure == "circle":
+    radius = float(input())
+    print(f"{pi * radius * radius:.3f}")
+
+elif figure == "triangle":
+    base = float(input())
+    height = float(input())
+    print(f"{0.5 * base * height:.3f}")
